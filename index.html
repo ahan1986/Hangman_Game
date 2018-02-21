@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>HANGMAN - Dragon Ball Super!</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="color:antiquewhite; text-align:center">Dragon Ball Super Hangman!</div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="rotate">HangMan!</div>
+                <br><br><br>
+                <div class="rotate">HangMan!</div>
+                <div class="rotate">HangMan!</div>
+                <br><br><br>
+                <div class="rotate">HangMan!</div>
+                <div class="rotate">HangMan!</div>
+                <br><br><br>
+                <div class="rotate">HangMan!</div>
+            </div>
+            <header class="flex-container col-md-4">
+                <img src="assets/images/dragonballsuperbackground.jpeg" />
+            </header>
+            <div class="col-md-4">
+                <div class="gameInstr">Press any key to get started!</div>
+                <br>
+                <div class="rightBox jumbotron">
+                    # of names correctly guessed!
+                    <br><div id="placeC">-</div>
+                </div>
+                <div class="jumbotron">
+                    Guess the name?
+
+                    <br><div class="coveredLetters a" id="blankNames"><br></div>
+
+                </div>
+
+                <div class="jumbotron">
+                    Number of guesses remaining!
+                    <br><div id="countdown">15</div>
+                </div>
+                <div class="jumbotron">
+                    Letters Already Guessed:
+                    <br><br><div class="wrongLetters a" id="wrongLetters"></div>
+                </div><br>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>

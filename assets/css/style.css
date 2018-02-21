@@ -3,7 +3,7 @@ body {
     color: black;
 }
 img {
-    position: relative;
+    position: static;
 }
 .flex-container {
     display: flex;
@@ -21,22 +21,25 @@ img {
     color: #fff;
     text-align: center;
 }
-#blankNames {
+/* #blankNames {
     display: inline-flex;
 
     font-size: 70px;
     height: 100%;
     width:100%;
     padding: 10px 15px 10px 15px;
-    
-}
+ } */
 .jumbotron {
-   margin: 8px;
+   margin: 10%;
+   margin-top: -1%;
+   margin-bottom: -2%;
+   padding: -5%;
+   width: 100%;
 }
-#placeC {
+/* #placeC {
     padding-top:4%;
     padding-left: 10%;
-}
+} */
 #wrongLetters{
     color:black;
     font-size: 20px;

@@ -1,9 +1,7 @@
 // selection of names that the computer will randomly choose for hangman
-var names = ["goku", "buu", "sam"];
+var names = ["goku", "buu", "vegeta", "goten", "whis", "beerus", "gohan", "trunks"];
 
 var correctCounter = 0;
-
-
 
 correct = 0;
 // creating a function that will start the game

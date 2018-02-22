@@ -28,7 +28,7 @@ var start = function () {
 
         currentDiv.appendChild(newDiv).setAttribute("class", "sam");
     }
-
+// creating function of what the user presses
     document.onkeypress = function (e) {
         var userPick = e.key;
         var counter = document.getElementById("countdown").innerHTML;
@@ -39,7 +39,7 @@ var start = function () {
 
         countdown.appendChild(countdown1);
         countdown.replaceChild(countdown1, countdown2);
-
+// if we have used up all the guesses two alerts and then it refreshes the whole page
         if(counter === 0) {
             alert("Out of guesses!");
             alert("Restarting the game now . . .");
@@ -62,6 +62,7 @@ var start = function () {
 
                 var elements = document.getElementsByTagName("span");
                 if (elements !== " - ") {
+                    // counting the counter
                     correctCounter++
                     if (correctCounter === randomNamesArray.length) {
                         correct++;
@@ -69,21 +70,23 @@ var start = function () {
                         var plac = document.getElementById("placeC");
                         var plac1 = document.createTextNode(correct);
                         var repla = document.getElementById("placeC").childNodes[0];
-
+                        // replacing the " - " with a letter
                         plac.replaceChild(plac1, repla);
 
+                        // once all the correct letters are filled, goes to empty function to clear things and goes back to the top of this start function
                         empty();
                         start();
                     }
                 }
 
             } else if (userPick !== randomNamesArray[i]) {
-
+                // trying to get rid of duplicates
                 wrongLetters.push(userPick);
                 var items = randomNamesArray[i];
                 uniqueLetters.splice(items, 1);
 
             }
+            // trying to get rid of duplicates
             wrongLetters.forEach(function (item) {
                 if (uniqueLetters.indexOf(item) < 0) {
                     uniqueLetters.push(item);
@@ -91,12 +94,14 @@ var start = function () {
             });
 
         }
+        // trying to get rid of dupicates again....
         wrongLetters.forEach(function (item) {
             if (uniqueLetters.indexOf(item) < 0) {
                 uniqueLetters.push(item);
             }
         });
 
+        // adding the letters pressed onto HTML
         var asdf = document.createTextNode(uniqueLetters);
         var newDiv2 = document.getElementById("wrongLetters");
         newDiv2.appendChild(asdf);

@@ -40,6 +40,12 @@ var start = function () {
         countdown.appendChild(countdown1);
         countdown.replaceChild(countdown1, countdown2);
 
+        if(counter === 0) {
+            alert("Out of guesses!");
+            alert("Restarting the game now . . .");
+            location.reload();
+        }
+
         for (var i = 0; i < randomNamesArray.length; i++) {
             var wrongLetters = [];
             var uniqueLetters = [];
